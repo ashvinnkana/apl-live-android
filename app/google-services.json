@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1031159552924",
+    "project_id": "apl-scorer-app",
+    "storage_bucket": "apl-scorer-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1031159552924:android:449d51e0fab799a07b0659",
+        "android_client_info": {
+          "package_name": "com.example.apl_live_scores"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1031159552924-28dg07q39b9gre8t0o8fdom9r6444ego.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2JWXC3A4X7zdmCDVUtdqIsQJUIAS-qsY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1031159552924-28dg07q39b9gre8t0o8fdom9r6444ego.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#101010">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="NO LIVE MATCH"
+        android:textAlignment="center"
+        android:paddingTop="100dp"/>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#101010">
+            <TextView
+                android:id="@+id/tournament"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="APL INDOOR TOURNAMENT"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:layout_marginTop="20dp"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/roundType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tournament"
+                android:text="Group Round"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#636363"
+                android:textSize="16sp" />
+
+
+            <LinearLayout
+                android:id="@+id/inningTarget"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="60dp"
+                android:paddingRight="60dp"
+                android:layout_below="@id/roundType">
+
+                <TextView
+                    android:id="@+id/inning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1st Inn"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:textColor="@color/teal_700"
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:id="@+id/target"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_height="wrap_content"
+                    android:text="Target: 56"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:textColor="#DF804D"
+                    android:textSize="16sp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/scoreOver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/inningTarget"
+                android:paddingLeft="60dp"
+
+                android:paddingRight="60dp">
+
+                <TextView
+                    android:id="@+id/score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00-0"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="true"
+                    android:textSize="48sp"
+                    />
+
+                <TextView
+                    android:id="@+id/over"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(0.0)"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="true"
+                    android:layout_marginLeft="6dp"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/overHead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="overs"
+                    android:textAlignment="textStart"
+                    android:layout_marginLeft="3dp"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/batingHead"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/scoreOver"
+                android:layout_marginTop="20dp"
+                android:background="#005C5B"
+                android:padding="5dp"
+                android:paddingStart="20dp"
+                android:paddingRight="20dp"
+                android:text="Batting - {team_name}"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/batsmanList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/batingHead"
+                android:layout_marginTop="10dp"
+                android:background="#101010" />
+
+            <RelativeLayout
+                android:id="@+id/extrasBlock"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/batsmanList"
+                android:background="#757575"
+                android:padding="5dp"
+                android:paddingStart="25dp">
+
+                <TextView
+                    android:id="@+id/extrasHead"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Extras"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/extras"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/extrasHead"
+                    android:text="0"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/bowlingHead"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/extrasBlock"
+                android:layout_marginTop="20dp"
+                android:background="#005C5B"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:paddingStart="20dp"
+                android:paddingRight="20dp"
+                android:text="Balling - {team_name}"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="14sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/bowlerList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bowlingHead"
+                android:background="#101010"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"/>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

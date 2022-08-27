@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#101010"
+        android:padding="5dp"
+        android:paddingStart="25dp">
+        <TextView
+            android:id="@+id/batsmanName"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="{Batsman Name*}"/>
+        <TextView
+            android:id="@+id/batsmanRuns"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/batsmanName"
+            android:textColor="@color/white"
+            android:text="{Runs}"/>
+        <TextView
+            android:id="@+id/batsmanStatus"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/batsmanRuns"
+            android:textColor="@color/teal_700"
+            android:text="NOT OUT"/>
+
+    </RelativeLayout>
+</RelativeLayout>
